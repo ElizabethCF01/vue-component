@@ -1,0 +1,9 @@
+EXAMPLE USAGE:
+
+pre-commit:
+  parallel: true
+  jobs:
+    - run: npm run lint
+      glob: '*.{js,ts,jsx,tsx,vue}'
+    - run: npm run format:hook
+      glob: '*.{js,ts,jsx,tsx,vue,json,css,scss,md,html}'
