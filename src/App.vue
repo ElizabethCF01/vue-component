@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import TheWelcome from './components/TheWelcome.vue'
+import ColorPaletteGenerator from './components/ColorPaletteGenerator.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <ColorPaletteGenerator />
   </main>
 </template>
 

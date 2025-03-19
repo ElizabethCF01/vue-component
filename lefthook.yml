@@ -5,5 +5,5 @@ pre-commit:
   jobs:
     - run: npm run lint
       glob: '*.{js,ts,jsx,tsx,vue}'
-    - run: npm run format:hook
+    - run: npm run format
       glob: '*.{js,ts,jsx,tsx,vue,json,css,scss,md,html}'
