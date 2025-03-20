@@ -42,7 +42,13 @@
               <span class="font-mono text-sm truncate">
                 {{ getColorValue(color.hex) }}
               </span>
-              <Button variant="ghost" size="icon" @click="copyToClipboard(color.hex)">
+              <Button
+                variant="ghost"
+                size="icon"
+                @click="copyToClipboard(color.hex)"
+                aria-label="Copy color"
+                title="Copy color"
+              >
                 <Copy class="h-4 w-4" />
               </Button>
             </div>
