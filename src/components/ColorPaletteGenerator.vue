@@ -24,6 +24,7 @@
       <div class="grid grid-cols-1 md:grid-cols-5 gap-4 w-full">
         <Card v-for="color in colors" :key="color.id" class="overflow-hidden">
           <div
+            :data-testid="`color-box-${color.id}`"
             class="h-40 flex items-center justify-center relative"
             :style="{ backgroundColor: color.hex }"
           >
@@ -32,6 +33,7 @@
               size="icon"
               :class="`absolute top-2 right-2 bg-white/10 backdrop-blur-sm ${getTextColor(color.hex)}`"
               @click="toggleLock(color.id)"
+              :data-testid="`lock-button-${color.id}`"
             >
               <Lock v-if="color.isLocked" class="h-4 w-4 text-black" />
               <Unlock v-else class="text-black h-4 w-4" />
@@ -48,6 +50,7 @@
                 @click="copyToClipboard(color.hex)"
                 aria-label="Copy color"
                 title="Copy color"
+                :data-testid="`copy-button-${color.id}`"
               >
                 <Copy class="h-4 w-4" />
               </Button>
